@@ -1,5 +1,6 @@
 node_modules/
 .wrangler/
+.guardrail/
 .DS_Store
 .dev.vars
 .env

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#ff8a4c">
+  <meta name="description" content="Build a one-of-a-kind clay robot in a magical pottery workshop.">
+  <title>RoboPottery</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@600;700;800&family=Nunito:wght@700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="brand">
+        <img src="/assets/heads/1.png" alt="">
+        <div><strong>RoboPottery</strong><span>Shape it. Bake it. Wake it!</span></div>
+      </div>
+      <div class="score-pill" aria-label="Clay stars"><span>⭐</span><b id="stars">0</b></div>
+      <button class="round-button sound-button" id="sound" aria-label="Turn sound on or off">🔊</button>
+    </header>
+
+    <main>
+      <section class="workshop" id="workshop" aria-label="Robot workshop">
+        <div class="sun-glow"></div>
+        <div class="mission" id="mission">
+          <span class="mission-face">💌</span>
+          <div><b>Little robot wish</b><p id="wish">Make a robot that can zoom!</p></div>
+        </div>
+        <div class="sparkles" id="sparkles" aria-hidden="true"></div>
+        <div class="robot-wrap" id="robot-wrap">
+          <div class="robot" id="robot">
+            <img class="robot-part robot-head" id="robot-head" alt="Selected clay robot head">
+            <img class="robot-part robot-body" id="robot-body" alt="Selected clay robot body">
+            <img class="robot-part robot-base" id="robot-base" alt="Selected clay robot feet">
+            <img class="robot-sticker" id="robot-sticker" alt="Selected decoration">
+          </div>
+          <div class="pottery-wheel"><i></i><span></span></div>
+          <p class="spin-hint">↔ Drag to spin the pottery wheel</p>
+        </div>
+        <div class="kiln" id="kiln" aria-hidden="true"><div class="kiln-door"><span>✨</span></div></div>
+      </section>
+
+      <section class="maker" aria-label="Robot maker controls">
+        <nav class="tabs" aria-label="Choose a robot part">
+          <button class="tab active" data-tab="heads"><span>🙂</span>Head</button>
+          <button class="tab" data-tab="bodies"><span>🧡</span>Body</button>
+          <button class="tab" data-tab="bases"><span>🛼</span>Feet</button>
+          <button class="tab" data-tab="stickers"><span>⭐</span>Sticker</button>
+        </nav>
+
+        <div class="tray" id="tray" aria-live="polite"></div>
+
+        <div class="glazes">
+          <div><b>Magic glaze</b><span>Pick a shiny color</span></div>
+          <div class="swatches" id="swatches">
+            <button data-hue="0" style="--swatch:#ff8b42" aria-label="Orange glaze"></button>
+            <button data-hue="75" style="--swatch:#7eddb5" aria-label="Mint glaze"></button>
+            <button data-hue="185" style="--swatch:#9d8cff" aria-label="Purple glaze"></button>
+            <button data-hue="315" style="--swatch:#ff72ae" aria-label="Pink glaze"></button>
+            <button data-hue="35" style="--swatch:#ffd84c" aria-label="Sunny glaze"></button>
+          </div>
+        </div>
+
+        <div class="actions">
+          <button class="surprise" id="surprise"><span>🎲</span> Surprise me</button>
+          <button class="bake" id="bake"><span>🔥</span> Bake my robot!</button>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="finished">
+    <div class="finished-card">
+      <div class="confetti" aria-hidden="true"></div>
+      <span class="tiny-label">FRESH FROM THE KILN</span>
+      <h2 id="robot-name">Beep-a-Boo!</h2>
+      <p>Your clay robot is alive!</p>
+      <div class="mini-robot" id="mini-robot"></div>
+      <div class="reward"><span>⭐</span><b>+3 pottery stars</b></div>
+      <div class="finished-actions">
+        <button id="dance">🎵 Dance!</button>
+        <button id="again">👐 Make another</button>
+      </div>
+    </div>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,10 +1,13 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "robot-pottery",
+  "main": "src/index.js",
   "compatibility_date": "2026-07-30",
   "assets": {
+    "binding": "ASSETS",
     "directory": "./public",
-    "not_found_handling": "single-page-application"
+    "not_found_handling": "single-page-application",
+    "run_worker_first": true
   },
   "observability": {
     "enabled": true

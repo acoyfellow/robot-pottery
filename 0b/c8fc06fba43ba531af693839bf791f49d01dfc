@@ -1,0 +1,19 @@
+package-lock.json
+  s_465e2a23baedf7::t_8acfc33cf89ea8 1-1590
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0bc8fc06fba43ba531af693839bf791f49d01dfc",
+  "prompts": {},
+  "sessions": {
+    "s_465e2a23baedf7": {
+      "agent_id": {
+        "tool": "pi",
+        "id": "019fae1e-df75-7508-a1fc-53e0403095dd",
+        "model": "gpt-5.6-sol"
+      },
+      "human_author": "Jordan Coeyman <jcoeyman@cloudflare.com>"
+    }
+  }
+}
